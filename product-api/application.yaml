@@ -17,14 +17,18 @@ spring:
 
   cache:
     type: redis
-    
+
 management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, circuitbreakers, circuitbreakerevents  # ← agregar
   endpoint:
     health:
       show-details: always
   health:
     circuitbreakers:
-      enabled: true    # ✅ muestra estado de cada circuit breaker
+      enabled: true # ✅ muestra estado de cada circuit breaker
 
 eureka:
   client:
