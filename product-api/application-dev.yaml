@@ -29,8 +29,8 @@ resilience4j:
   circuitbreaker:
     instances:
       mysql:
-        sliding-window-size: 10              # evalúa las últimas 10 llamadas
-        failure-rate-threshold: 50           # abre si el 50% fallan
-        wait-duration-in-open-state: 10s     # espera 10s antes de HALF-OPEN
-        permitted-calls-in-half-open-state: 3
-        register-health-indicator: true     # ← agregar esto
+        sliding-window-size: 5                    # solo 5 llamadas para evaluar (más rápido de provocar)
+        failure-rate-threshold: 40                # abre con 40% de fallas (2 de 5)
+        wait-duration-in-open-state: 30s          # ← espera 30s en OPEN (visible para alumnos)
+        permitted-calls-in-half-open-state: 2     # solo 2 llamadas de prueba en HALF-OPEN
+        register-health-indicator: true
