@@ -33,4 +33,4 @@ resilience4j:
         failure-rate-threshold: 40                # abre con 40% de fallas (2 de 5)
         wait-duration-in-open-state: 30s          # ← espera 30s en OPEN (visible para alumnos)
         permitted-calls-in-half-open-state: 2     # solo 2 llamadas de prueba en HALF-OPEN
-        register-health-indicator: true
+        register-health-indicator: true           # registro de salud en actuator
