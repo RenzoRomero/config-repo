@@ -21,3 +21,12 @@ spring:
 
 server:
   port: 8081
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      mysql:
+        sliding-window-size: 10              # evalúa las últimas 10 llamadas
+        failure-rate-threshold: 50           # abre si el 50% fallan
+        wait-duration-in-open-state: 10s     # espera 10s antes de HALF-OPEN
+        permitted-calls-in-half-open-state: 3
