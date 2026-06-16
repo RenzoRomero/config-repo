@@ -4,6 +4,9 @@ spring:
     url: jdbc:mysql://mysql-2f9cbb47-tecylabproject.e.aivencloud.com:11425/defaultdb?ssl-mode=REQUIRED
     username: avnadmin
     password: AVNS_EtwDOh9y2K3Ynpl2hJz
+    hikari:
+      connection-timeout: 5000        # espera máx 5s para obtener conexión del pool
+      validation-timeout: 3000        # espera máx 3s para validar la conexión
 
   data:
     mongodb:
