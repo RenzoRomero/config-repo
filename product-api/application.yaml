@@ -10,7 +10,7 @@ spring:
         enabled: true
 
   jpa:
-    database-platform: org.hibernate.dialect.MySQLDialect
+    database-platform: org.hibernate.dialect.SQLServerDialect
     show-sql: true
     hibernate:
       ddl-auto: update
