@@ -13,10 +13,11 @@ spring:
         secret:
           property-sources[0]:
             endpoint: https://tecylab-keyvault-romero.vault.azure.net/
-  data:
-    mongodb:
-      uri: mongodb+srv://Admin:Admin@cluster0.0uhpjwj.mongodb.net/?appName=Cluster0
-      database: Product-API-Auditoria
+
+      cosmos:
+        endpoint: https://tecylab-cosmosdb.documents.azure.com:443/
+        key: sTMxFrmKKhV9L9kqCDzNatDgLWCuDl92DztuKTx879rGB36PKvNa0qP5oPVf9ZtmziIgggUgP5iFACDbzLF2Iw==
+        database: logs
 
     redis:
       host: redis-18284.c251.east-us-mz.azure.cloud.redislabs.com
