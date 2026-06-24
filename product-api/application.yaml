@@ -22,13 +22,15 @@ management:
   endpoints:
     web:
       exposure:
-        include: env, health, info, circuitbreakers, circuitbreakerevents  # ← agregar
+        include: env, health, info, circuitbreakers, circuitbreakerevents
   endpoint:
     health:
       show-details: always
+    env:
+      show-values: always
   health:
     circuitbreakers:
-      enabled: true # ✅ muestra estado de cada circuit breaker
+      enabled: true
 
 eureka:
   client:
