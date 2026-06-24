@@ -1,7 +1,7 @@
 spring:
   datasource:
     drive-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
-    url: ${azure-sql-url}
+    url: jdbc:sqlserver://tecylab-sql-server.database.windows.net:1433;database=free-sql-db-0750962;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
     username: ${azure-sql-username}
     password: ${azure-sql-passwrod}
     hikari:
