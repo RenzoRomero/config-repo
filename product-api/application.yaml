@@ -22,7 +22,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: health, info, circuitbreakers, circuitbreakerevents  # ← agregar
+        include: env, health, info, circuitbreakers, circuitbreakerevents  # ← agregar
   endpoint:
     health:
       show-details: always
