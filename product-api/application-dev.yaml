@@ -18,7 +18,12 @@ spring:
         endpoint: https://tecylab-cosmosdb.documents.azure.com:443/
         key: sTMxFrmKKhV9L9kqCDzNatDgLWCuDl92DztuKTx879rGB36PKvNa0qP5oPVf9ZtmziIgggUgP5iFACDbzLF2Iw==
         database: logs
-        create-database-if-not-exists: true
+
+      storage:
+        blob:
+          endpoint: https://tecylabstorage.blob.core.windows.net/
+          account-name: tecylabstorage
+          account-key: Ba95OseR/VCaV0ImsGiAOrelxr+Yfv0lqZq8qOaNtEMxLYB5rsMSGoVm5bzU3ZOeLYhzplMjv/7B+AStQEc7mQ==
 
     redis:
       host: redis-18284.c251.east-us-mz.azure.cloud.redislabs.com
