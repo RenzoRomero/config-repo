@@ -2,8 +2,8 @@ spring:
   datasource:
     drive-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     url: jdbc:sqlserver://tecylab-sql-server.database.windows.net:1433;database=free-sql-db-0750962;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
-    username: ${azure-sql-username}
-    password: ${azure-sql-passwrod}
+    username: adminTecylab
+    password: admin123!
     hikari:
       connection-timeout: 5000        # espera máx 5s para obtener conexión del pool
       validation-timeout: 3000        # espera máx 3s para validar la conexión
