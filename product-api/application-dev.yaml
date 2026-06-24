@@ -1,6 +1,6 @@
 spring:
   datasource:
-    drive-class-name: org.hibernate.dialect.SQLServerDialect
+    drive-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     url: jdbc:sqlserver://tecylab-sql-server.database.windows.net:1433;database=free-sql-db-0750962;encrypt=true;trustServerCertificate=false;hostNameInCertificate=*.database.windows.net;loginTimeout=30;
     username: adminTecylab
     password: admin123!
