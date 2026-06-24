@@ -41,3 +41,7 @@ resilience4j:
         wait-duration-in-open-state: 30s          # ← espera 30s en OPEN (visible para alumnos)
         permitted-calls-in-half-open-state: 2     # solo 2 llamadas de prueba en HALF-OPEN
         register-health-indicator: true           # registro de salud en actuator
+
+app:
+  storage:
+    container: reports
