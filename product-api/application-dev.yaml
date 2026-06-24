@@ -1,13 +1,18 @@
 spring:
   datasource:
-    drive-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://mysql-2f9cbb47-tecylabproject.e.aivencloud.com:11425/defaultdb?ssl-mode=REQUIRED
-    username: avnadmin
-    password: AVNS_EtwDOh9y2K3Ynpl2hJz
+    drive-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: ${azure-sql-url}
+    username: ${azure-sql-username}
+    password: ${azure-sql-passwrod}
     hikari:
       connection-timeout: 5000        # espera máx 5s para obtener conexión del pool
       validation-timeout: 3000        # espera máx 3s para validar la conexión
-
+  cloud: 
+    azure: 
+      keyvault:
+        secret:
+          property-sources[0]:
+            endpoint: https://tecylab-keyvault-romero.vault.azure.net/
   data:
     mongodb:
       uri: mongodb+srv://Admin:Admin@cluster0.0uhpjwj.mongodb.net/?appName=Cluster0
