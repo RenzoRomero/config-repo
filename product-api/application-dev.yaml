@@ -23,7 +23,7 @@ spring:
         blob:
           endpoint: https://tecylabstorage.blob.core.windows.net/
           account-name: tecylabstorage
-          account-key: Ba95OseR/VCaV0ImsGiAOrelxr+Yfv0lqZq8qOaNtEMxLYB5rsMSGoVm5bzU3ZOeLYhzplMjv/7B+AStQEc7mQ==
+          account-key: ${azure-storage-account-key}
 
     redis:
       host: redis-18284.c251.east-us-mz.azure.cloud.redislabs.com
