@@ -16,7 +16,7 @@ spring:
 
       cosmos:
         endpoint: https://tecylab-cosmosdb.documents.azure.com:443/
-        key: sTMxFrmKKhV9L9kqCDzNatDgLWCuDl92DztuKTx879rGB36PKvNa0qP5oPVf9ZtmziIgggUgP5iFACDbzLF2Iw==
+        key: ${azure-cosmos-key}
         database: logs
 
       storage:
