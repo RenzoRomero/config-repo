@@ -28,7 +28,7 @@ spring:
     redis:
       host: redis-18284.c251.east-us-mz.azure.cloud.redislabs.com
       port: 18284
-      username: sTMxFrmKKhV9L9kqCDzNatDgLWCuDl92DztuKTx879rGB36PKvNa0qP5oPVf9ZtmziIgggUgP5iFACDbzLF2Iw12
+      username: default
       password: zLgjwsC9u74Yoe4ZvzoWakFDhxsb9Qr0
 
   cache:
