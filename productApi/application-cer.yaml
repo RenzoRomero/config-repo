@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql-2f9cbb47-tecylabproject.e.aivencloud.com:11425/MyStoreDB?ssl-mode=REQUIRED
+    username: avnadmin
+    password: AVNS_EtwDOh9y2K3Ynpl2hJz
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  data:
+    redis:
+      host: redis-19217.c251.east-us-mz.azure.cloud.redislabs.com
+      port: 19217
+      username: default
+      password: bRWruk3Nnzpl9NKpSA62pTqagiRuqgcj
+
+  cache:
+    type: redis
+
+  mongodb:
+    uri: mongodb+srv://romeropajuelorenzo_db_user:wa4cqdoiAHfKtTBI@cluster0.kdxrkh9.mongodb.net/?appName=Cluster0
+    database: ProductDB-Auditoria
+
