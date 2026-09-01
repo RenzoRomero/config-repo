@@ -25,15 +25,6 @@ spring:
           account-name: tecylabstorage
           account-key: ${azure-storage-account-key}
 
-    redis:
-      host: redis-18284.c251.east-us-mz.azure.cloud.redislabs.com
-      port: 18284
-      username: default
-      password: zLgjwsC9u74Yoe4ZvzoWakFDhxsb9Qr0
-
-  cache:
-    type: redis
-
 server:
   port: 8081
 
