@@ -2,20 +2,11 @@ spring:
   application:
     name: product-api
 
-  profiles:
-    active: dev
-
-  config:
-    import: optional:configserver:https://localhost:8888
-
   jpa:
     database-platform: org.hibernate.dialect.SQLServerDialect
     show-sql: true
     hibernate:
       ddl-auto: update
-
-  cache:
-    type: redis
 
 management:
   endpoints:
@@ -34,11 +25,6 @@ management:
 eureka:
   client:
     service-url:
-      defaultZone: https://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/
     fetch-registry: true
     register-with-eureka: true
-
-
-
-
-
