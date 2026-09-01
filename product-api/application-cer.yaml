@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    drive-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://mysql-2f9cbb47-tecylabproject.e.aivencloud.com:11425/defaultdb?ssl-mode=REQUIRED
+    username: avnadmin
+    password: AVNS_EtwDOh9y2K3Ynpl2hJz
+
+  data:
+    mongodb:
+      uri: mongodb+srv://Admin:Admin@cluster0.0uhpjwj.mongodb.net/?appName=Cluster0
+      database: Product-API-Auditoria
+
+    redis:
+      host: redis-18284.c251.east-us-mz.azure.cloud.redislabs.com
+      port: 18284
+      username: default
+      password: zLgjwsC9u74Yoe4ZvzoWakFDhxsb9Qr0
+
+  cache:
+    type: redis

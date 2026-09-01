@@ -1,0 +1,52 @@
+spring:
+  datasource:
+    drive-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: ${azure-sql-url}
+    username: ${azure-sql-username}
+    password: ${azure-sql-password}
+    hikari:
+      connection-timeout: 5000        # espera máx 5s para obtener conexión del pool
+      validation-timeout: 3000        # espera máx 3s para validar la conexión
+  cloud: 
+    azure: 
+      keyvault:
+        secret:
+          property-sources[0]:
+            endpoint: https://tecylab-keyvault-romero.vault.azure.net/
+
+      cosmos:
+        endpoint: https://tecylab-cosmosdb.documents.azure.com:443/
+        key: ${azure-cosmos-key}
+        database: logs
+
+      storage:
+        blob:
+          endpoint: https://tecylabstorage.blob.core.windows.net/
+          account-name: tecylabstorage
+          account-key: ${azure-storage-account-key}
+
+    redis:
+      host: redis-18284.c251.east-us-mz.azure.cloud.redislabs.com
+      port: 18284
+      username: default
+      password: zLgjwsC9u74Yoe4ZvzoWakFDhxsb9Qr0
+
+  cache:
+    type: redis
+
+server:
+  port: 8081
+
+resilience4j:
+  circuitbreaker:
+    instances:
+      mysql:
+        sliding-window-size: 5                    # solo 5 llamadas para evaluar (más rápido de provocar)
+        failure-rate-threshold: 40                # abre con 40% de fallas (2 de 5)
+        wait-duration-in-open-state: 30s          # ← espera 30s en OPEN (visible para alumnos)
+        permitted-calls-in-half-open-state: 2     # solo 2 llamadas de prueba en HALF-OPEN
+        register-health-indicator: true           # registro de salud en actuator
+
+app:
+  storage:
+    container: reports
