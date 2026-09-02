@@ -15,7 +15,7 @@ spring:
             endpoint: https://tecylab-keyvault-romero.vault.azure.net/
 
       cosmos:
-        endpoint: https://tecylab-cosmosdb.documents.azure.com:443/
+        endpoint: ${azure-cosmos-uri}
         key: ${azure-cosmos-key}
         database: logs
 
