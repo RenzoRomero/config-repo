@@ -21,7 +21,7 @@ spring:
 
       storage:
         blob:
-          endpoint: https://tecylabstorage.blob.core.windows.net/
+          endpoint: https://storageaccounttecylab.blob.core.windows.net/
           account-name: tecylabstorage
           account-key: ${azure-storage-account-key}
 
