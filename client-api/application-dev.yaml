@@ -30,6 +30,15 @@ spring:
       ddl-auto: update
     show-sql:  true
 
+eureka:
+  client:
+    service-url:
+      defaultZone: https://eurekaserver-e0b0cpgzg2g9ehaj.westus3-01.azurewebsites.net/eureka
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
+    prefer-ip-address: true
+
+
 springdoc:
   api-docs:
     enabled: true
