@@ -12,7 +12,7 @@ spring:
       keyvault:
         secret:
           property-sources[0]:
-            endpoint: https://tecylab-keyvault-romero.vault.azure.net/
+            endpoint: https://tecylabkeyvault.vault.azure.net/
 
       cosmos:
         endpoint: ${azure-cosmos-uri}
